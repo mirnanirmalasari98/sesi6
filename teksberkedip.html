@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tugas Mandiri 6</title>
+    <style> 
+    #blinkText {
+        font-size: 24px;
+    }
+    </style>
+</head>
+
+<body onload="blinkText()">
+    <div id="berkedip">
+    <p class="paragraf">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Quo quaerat recusandae qui ullam eaque cumque ea fugit,
+        debitis commodi ipsum illo dolorum consequatur sed laudantium suscipit quis magni,
+        maiores in?</p>
+    <p class="paragraf">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia esse pariatur in incidunt. Accusantium, vel aperiam reprehenderit numquam, dolorum facilis ea beatae, quasi earum aut dolores enim quo ipsa aspernatur!</p>
+
+     <p class="paragraf">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque provident qui, accusantium aliquam temporibus pariatur cumque officia, dolor doloribus harum rerum inventore nulla? Delectus perspiciatis aut saepe, ullam aliquam deserunt.</p>   
+    </div>
+   <script>
+
+function blinkText() {
+  var textElement = document.getElementById("berkedip");
+
+  setInterval(function() {
+    var color = getRandomColor();
+    textElement.style.color = color;
+  }, 500); 
+}
+
+function getRandomColor() {
+  var letters = "0123456789ABCDEF";
+  var color = "#";
+
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+
+  return color;
+}
+
+    </script>
+
+</body>
+
+</html>
